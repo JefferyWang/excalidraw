@@ -29,6 +29,8 @@ export interface FontMetadata {
   serverSide?: true;
   /** flag to indiccate a local-only font */
   local?: true;
+  /** display name */
+  name?: string;
 }
 
 export const FONT_METADATA: Record<number, FontMetadata> = {
@@ -108,6 +110,26 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
     },
     icon: FontFamilyNormalIcon,
     serverSide: true,
+  },
+  [FONT_FAMILY.YEFONTQiMengShouJi]: {
+    name: "也字工厂-绮梦手迹",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
+  },
+  [FONT_FAMILY.YEFONTCangNanShouJi]: {
+    name: "也字工厂-苍南手迹",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
   },
 };
 

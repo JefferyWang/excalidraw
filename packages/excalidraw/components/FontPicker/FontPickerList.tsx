@@ -67,7 +67,7 @@ export const FontPickerList = React.memo(
             const fontDescriptor = {
               value: familyId,
               icon: metadata.icon,
-              text: fonts[0].fontFace.family,
+              text: metadata.name || fonts[0].fontFace.family,
             };
 
             if (metadata.deprecated) {
@@ -196,6 +196,7 @@ export const FontPickerList = React.memo(
         order={index}
         textStyle={{
           fontFamily: getFontFamilyString({ fontFamily: font.value }),
+          fontSize: 18,
         }}
         hovered={font.value === hoveredFont?.value}
         selected={font.value === selectedFontFamily}
