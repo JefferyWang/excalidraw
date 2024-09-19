@@ -136,6 +136,12 @@ export const FONT_FAMILY = {
   "Liberation Sans": 9,
   YEFONTQiMengShouJi: 10,
   YEFONTCangNanShouJi: 11,
+  YEFONTZongYiPangBaiTi: 12,
+  YEFONTQingSeQingShuTi: 13,
+  YEFONTMengHuiShouJiTi: 14,
+  YEFONTMengMaShouJi: 15,
+  YEFONTFeiFeiShouJi: 16,
+  YEFONTJieRuiShouJi: 17,
 };
 
 export const THEME = {

@@ -131,6 +131,66 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
     },
     icon: FreedrawIcon,
   },
+  [FONT_FAMILY.YEFONTZongYiPangBaiTi]: {
+    name: "也字工厂-综艺旁白体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
+  },
+  [FONT_FAMILY.YEFONTQingSeQingShuTi]: {
+    name: "也字工厂-青涩情书体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
+  },
+  [FONT_FAMILY.YEFONTMengHuiShouJiTi]: {
+    name: "也字工厂-梦洄手迹",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
+  },
+  [FONT_FAMILY.YEFONTMengMaShouJi]: {
+    name: "也字工厂-猛犸手迹",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
+  },
+  [FONT_FAMILY.YEFONTFeiFeiShouJi]: {
+    name: "也字工厂-斐斐手迹",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
+  },
+  [FONT_FAMILY.YEFONTJieRuiShouJi]: {
+    name: "也字工厂-杰瑞手迹",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreedrawIcon,
+  },
 };
 
 /** Unicode ranges */
