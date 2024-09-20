@@ -23,14 +23,6 @@ import Excalifont from "./assets/Excalifont-Regular.woff2";
 import Cascadia from "./assets/CascadiaCode-Regular.woff2";
 import ComicShanns from "./assets/ComicShanns-Regular.woff2";
 import LiberationSans from "./assets/LiberationSans-Regular.woff2";
-import YeziQiMengShouJi from "./assets/YZ_QiMengShouJi.woff2";
-import YeziCangNanShouJi from "./assets/YZ_CangNanShouJi.woff2";
-import YeziZongYiPangBaiTi from "./assets/YZ_ZongYiPangBai.woff2";
-import YeziQingSeQingShu from "./assets/YZ_QingSeQingShu.woff2";
-import YeziMengHuiShouJi from "./assets/YZ_MengHuiShouJi.woff2";
-import YeziMengMaShouJi from "./assets/YZ_MengMaShouJi.woff2";
-import YeziFeiFeiShouJi from "./assets/YZ_FeiFeiShouJi.woff2";
-import YeziJieRuiShouJi from "./assets/YZ_JieRuiShouJi.woff2";
 
 import LilitaLatin from "https://fonts.gstatic.com/s/lilitaone/v15/i7dPIFZ9Zz-WBtRtedDbYEF8RXi4EwQ.woff2";
 import LilitaLatinExt from "https://fonts.gstatic.com/s/lilitaone/v15/i7dPIFZ9Zz-WBtRtedDbYE98RXi4EwSsbg.woff2";
@@ -248,73 +240,53 @@ export class Fonts {
       uri: ComicShanns,
     });
 
+    _register("Xiaolai SC", FONT_METADATA[FONT_FAMILY["Xiaolai SC"]]);
+
+    _register("Yozai", FONT_METADATA[FONT_FAMILY.Yozai]);
+
     _register(
-      "YEFONTQiMengShouJi",
-      FONT_METADATA[FONT_FAMILY.YEFONTQiMengShouJi],
-      {
-        uri: YeziQiMengShouJi,
-      },
+      "LXGW WenKai Lite",
+      FONT_METADATA[FONT_FAMILY["LXGW WenKai Lite"]],
     );
+
+    _register("ShouShuti", FONT_METADATA[FONT_FAMILY.ShouShuti]);
+
+    _register("MuyaoPleased", FONT_METADATA[FONT_FAMILY.MuyaoPleased]);
+
+    _register("Muyao-Softbrush", FONT_METADATA[FONT_FAMILY["Muyao-Softbrush"]]);
+
+    _register("新叶念体", FONT_METADATA[FONT_FAMILY["新叶念体"]]);
+
+    _register(
+      "JasonHandwriting1",
+      FONT_METADATA[FONT_FAMILY.JasonHandwriting1],
+    );
+
+    _register(
+      "JasonHandwriting2",
+      FONT_METADATA[FONT_FAMILY.JasonHandwriting2],
+    );
+
+    _register("ChillZhuo", FONT_METADATA[FONT_FAMILY.ChillZhuo]);
 
     _register(
       "YEFONTCangNanShouJi",
       FONT_METADATA[FONT_FAMILY.YEFONTCangNanShouJi],
-      {
-        uri: YeziCangNanShouJi,
-      },
-    );
-
-    _register(
-      "YEFONTZongYiPangBaiTi",
-      FONT_METADATA[FONT_FAMILY.YEFONTZongYiPangBaiTi],
-      {
-        uri: YeziZongYiPangBaiTi,
-      },
     );
 
     _register(
       "YEFONTQingSeQingShuTi",
       FONT_METADATA[FONT_FAMILY.YEFONTQingSeQingShuTi],
-      {
-        uri: YeziQingSeQingShu,
-      },
     );
 
     _register(
-      "YEFONTMengHuiShouJiTi",
-      FONT_METADATA[FONT_FAMILY.YEFONTMengHuiShouJiTi],
-      {
-        uri: YeziMengHuiShouJi,
-      },
+      "YEFONTQiMengShouJi",
+      FONT_METADATA[FONT_FAMILY.YEFONTQiMengShouJi],
     );
 
     _register(
-      "YEFONTMengMaShouJi",
-      FONT_METADATA[FONT_FAMILY.YEFONTMengMaShouJi],
-      {
-        uri: YeziMengMaShouJi,
-      },
-    );
-
-    _register(
-      "YEFONTFeiFeiShouJi",
-      FONT_METADATA[FONT_FAMILY.YEFONTFeiFeiShouJi],
-      {
-        uri: YeziFeiFeiShouJi,
-      },
-    );
-
-    _register(
-      "YEFONTJieRuiShouJi",
-      FONT_METADATA[FONT_FAMILY.YEFONTJieRuiShouJi],
-      {
-        uri: YeziJieRuiShouJi,
-      },
-    );
-
-    _register(
-      "LXGW WenKai Screen",
-      FONT_METADATA[FONT_FAMILY["LXGW WenKai Screen"]],
+      "YEFONTZongYiDanMuTi",
+      FONT_METADATA[FONT_FAMILY.YEFONTZongYiDanMuTi],
     );
 
     _register(

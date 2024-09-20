@@ -18,7 +18,7 @@ import "./FontPicker.scss";
 
 export const DEFAULT_FONTS = [
   {
-    value: FONT_FAMILY.Excalifont,
+    value: FONT_FAMILY["新叶念体"],
     icon: FreedrawIcon,
     text: t("labels.handDrawn"),
     testId: "font-family-handrawn",

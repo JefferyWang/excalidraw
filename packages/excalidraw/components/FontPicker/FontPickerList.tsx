@@ -83,7 +83,8 @@ export const FontPickerList = React.memo(
             return fontDescriptor as FontDescriptor;
           })
           .sort((a, b) =>
-            a.text.toLowerCase() > b.text.toLowerCase() ? 1 : -1,
+            // a.text.toLowerCase() < b.text.toLowerCase() ? 1 : -1,
+            a.value > b.value ? 1 : -1,
           ),
       [],
     );

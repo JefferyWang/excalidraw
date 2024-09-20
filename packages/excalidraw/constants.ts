@@ -134,15 +134,22 @@ export const FONT_FAMILY = {
   "Lilita One": 7,
   "Comic Shanns": 8,
   "Liberation Sans": 9,
-  YEFONTQiMengShouJi: 10,
-  YEFONTCangNanShouJi: 11,
-  YEFONTZongYiPangBaiTi: 12,
-  YEFONTQingSeQingShuTi: 13,
-  YEFONTMengHuiShouJiTi: 14,
-  YEFONTMengMaShouJi: 15,
-  YEFONTFeiFeiShouJi: 16,
-  YEFONTJieRuiShouJi: 17,
-  "LXGW WenKai Screen": 18,
+  // 免费字体
+  "Xiaolai SC": 1001,
+  Yozai: 1002,
+  "LXGW WenKai Lite": 1003,
+  ShouShuti: 1004,
+  MuyaoPleased: 1005,
+  "Muyao-Softbrush": 1006,
+  新叶念体: 1007,
+  JasonHandwriting1: 1008,
+  JasonHandwriting2: 1009,
+  ChillZhuo: 1010,
+  // 不能商用字体
+  YEFONTCangNanShouJi: 2001,
+  YEFONTQingSeQingShuTi: 2002,
+  YEFONTQiMengShouJi: 2003,
+  YEFONTZongYiDanMuTi: 2004,
 };
 
 export const THEME = {

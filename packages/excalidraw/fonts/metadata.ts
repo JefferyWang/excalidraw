@@ -113,28 +113,109 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
     icon: FontFamilyNormalIcon,
     serverSide: true,
   },
-  [FONT_FAMILY.YEFONTQiMengShouJi]: {
-    name: "也字工厂-绮梦手迹",
+  [FONT_FAMILY["Xiaolai SC"]]: {
+    name: "小赖字体",
     metrics: {
       unitsPerEm: 1000,
       ascender: 1000,
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: NoBusinessIcon,
+    icon: FreeIcon,
   },
+  [FONT_FAMILY.Yozai]: {
+    name: "悠哉字体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY["LXGW WenKai Lite"]]: {
+    name: "霞鹜文楷",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY.ShouShuti]: {
+    name: "手书体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY.MuyaoPleased]: {
+    name: "沐瑶随心手写体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY["Muyao-Softbrush"]]: {
+    name: "沐瑶软笔手写体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY["新叶念体"]]: {
+    name: "新叶念体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY.JasonHandwriting1]: {
+    name: "清松手写体 1",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY.JasonHandwriting2]: {
+    name: "清松手写体 2",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  [FONT_FAMILY.ChillZhuo]: {
+    name: "寒蝉手拙体",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
+  },
+  // 不能商用的字体
   [FONT_FAMILY.YEFONTCangNanShouJi]: {
     name: "也字工厂-苍南手迹",
-    metrics: {
-      unitsPerEm: 1000,
-      ascender: 1000,
-      descender: -400,
-      lineHeight: 1.25,
-    },
-    icon: NoBusinessIcon,
-  },
-  [FONT_FAMILY.YEFONTZongYiPangBaiTi]: {
-    name: "也字工厂-综艺旁白体",
     metrics: {
       unitsPerEm: 1000,
       ascender: 1000,
@@ -153,8 +234,8 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
     },
     icon: NoBusinessIcon,
   },
-  [FONT_FAMILY.YEFONTMengHuiShouJiTi]: {
-    name: "也字工厂-梦洄手迹",
+  [FONT_FAMILY.YEFONTQiMengShouJi]: {
+    name: "也字工厂-绮梦手迹",
     metrics: {
       unitsPerEm: 1000,
       ascender: 1000,
@@ -163,8 +244,8 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
     },
     icon: NoBusinessIcon,
   },
-  [FONT_FAMILY.YEFONTMengMaShouJi]: {
-    name: "也字工厂-猛犸手迹",
+  [FONT_FAMILY.YEFONTZongYiDanMuTi]: {
+    name: "也字工厂-综艺弹幕体",
     metrics: {
       unitsPerEm: 1000,
       ascender: 1000,
@@ -172,36 +253,6 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       lineHeight: 1.25,
     },
     icon: NoBusinessIcon,
-  },
-  [FONT_FAMILY.YEFONTFeiFeiShouJi]: {
-    name: "也字工厂-斐斐手迹",
-    metrics: {
-      unitsPerEm: 1000,
-      ascender: 1000,
-      descender: -400,
-      lineHeight: 1.25,
-    },
-    icon: NoBusinessIcon,
-  },
-  [FONT_FAMILY.YEFONTJieRuiShouJi]: {
-    name: "也字工厂-杰瑞手迹",
-    metrics: {
-      unitsPerEm: 1000,
-      ascender: 1000,
-      descender: -400,
-      lineHeight: 1.25,
-    },
-    icon: NoBusinessIcon,
-  },
-  [FONT_FAMILY["LXGW WenKai Screen"]]: {
-    name: "霞婺文楷",
-    metrics: {
-      unitsPerEm: 1000,
-      ascender: 1000,
-      descender: -400,
-      lineHeight: 1.25,
-    },
-    icon: FreeIcon,
   },
 };
 
