@@ -142,6 +142,7 @@ export const FONT_FAMILY = {
   YEFONTMengMaShouJi: 15,
   YEFONTFeiFeiShouJi: 16,
   YEFONTJieRuiShouJi: 17,
+  "LXGW WenKai Screen": 18,
 };
 
 export const THEME = {

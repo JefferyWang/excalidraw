@@ -3,6 +3,8 @@ import {
   FontFamilyHeadingIcon,
   FontFamilyNormalIcon,
   FreedrawIcon,
+  NoBusinessIcon,
+  FreeIcon,
 } from "../components/icons";
 import { FONT_FAMILY } from "../constants";
 
@@ -119,7 +121,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTCangNanShouJi]: {
     name: "也字工厂-苍南手迹",
@@ -129,7 +131,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTZongYiPangBaiTi]: {
     name: "也字工厂-综艺旁白体",
@@ -139,7 +141,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTQingSeQingShuTi]: {
     name: "也字工厂-青涩情书体",
@@ -149,7 +151,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTMengHuiShouJiTi]: {
     name: "也字工厂-梦洄手迹",
@@ -159,7 +161,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTMengMaShouJi]: {
     name: "也字工厂-猛犸手迹",
@@ -169,7 +171,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTFeiFeiShouJi]: {
     name: "也字工厂-斐斐手迹",
@@ -179,7 +181,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTJieRuiShouJi]: {
     name: "也字工厂-杰瑞手迹",
@@ -189,7 +191,17 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
-    icon: FreedrawIcon,
+    icon: NoBusinessIcon,
+  },
+  [FONT_FAMILY["LXGW WenKai Screen"]]: {
+    name: "霞婺文楷",
+    metrics: {
+      unitsPerEm: 1000,
+      ascender: 1000,
+      descender: -400,
+      lineHeight: 1.25,
+    },
+    icon: FreeIcon,
   },
 };
 

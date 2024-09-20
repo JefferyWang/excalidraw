@@ -313,6 +313,11 @@ export class Fonts {
     );
 
     _register(
+      "LXGW WenKai Screen",
+      FONT_METADATA[FONT_FAMILY["LXGW WenKai Screen"]],
+    );
+
+    _register(
       "Lilita One",
       FONT_METADATA[FONT_FAMILY["Lilita One"]],
       { uri: LilitaLatinExt, descriptors: { unicodeRange: RANGES.LATIN_EXT } },

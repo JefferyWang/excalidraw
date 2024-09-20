@@ -2,6 +2,8 @@
 /* These cannot be dynamically prepended with `EXCALIDRAW_ASSET_PATH`. */
 /* WARN: The following content is replaced during excalidraw-app build  */
 
+@import url("//npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css");
+
 @font-face {
   font-family: "Assistant";
   src: url(./Assistant-Regular.woff2) format("woff2");
