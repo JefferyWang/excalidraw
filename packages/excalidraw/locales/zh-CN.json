@@ -85,6 +85,7 @@
     "ungroup": "解除编组",
     "collaborators": "协作者",
     "showGrid": "显示网格",
+    "toggleGrid": "切换网格",
     "addToLibrary": "添加到素材库中",
     "removeFromLibrary": "从素材库中移除",
     "libraryLoadingMessage": "正在加载素材库…",
@@ -105,7 +106,9 @@
     "share": "分享",
     "showStroke": "显示描边颜色选择器",
     "showBackground": "显示背景颜色选择器",
+    "showFonts": "显示字体选择器",
     "toggleTheme": "切换主题",
+    "theme": "主题",
     "personalLib": "个人素材库",
     "excalidrawLib": "Excalidraw 素材库",
     "decreaseFontSize": "缩小字体大小",
@@ -144,6 +147,13 @@
     "noItems": "尚未添加任何项目……",
     "hint_emptyLibrary": "选中画布上的项目添加到此处，或从下方的公共素材库中导入。",
     "hint_emptyPrivateLibrary": "选中画布上的项目添加到此处。"
+  },
+  "search": {
+    "title": "搜索画布元素",
+    "noMatch": "未找到匹配项...",
+    "singleResult": "结果",
+    "multipleResults": "结果",
+    "placeholder": "搜索画布元素..."
   },
   "buttons": {
     "clearReset": "重置画布",
@@ -328,6 +338,8 @@
     "click": "单击",
     "deepSelect": "深度选择",
     "deepBoxSelect": "在方框内深度选择并避免拖拽",
+    "createFlowchart": "基于通用元素创建流程图",
+    "navigateFlowchart": "流程图导航",
     "curvedArrow": "曲线箭头",
     "curvedLine": "曲线",
     "documentation": "文档",
@@ -427,6 +439,7 @@
     "scene": "画布",
     "selected": "选中",
     "storage": "存储",
+    "fullTitle": "画布和元素信息",
     "title": "详细统计信息",
     "total": "总计",
     "version": "版本",
@@ -521,5 +534,31 @@
     "description": "目前仅支持<flowchartLink>流程图</flowchartLink>、<sequenceLink>序列图</sequenceLink>和<classLink>类图</classLink>。其他类型在 Excalidraw 中将以图像呈现。",
     "syntax": "Mermaid 语法",
     "preview": "预览"
+  },
+  "quickSearch": {
+    "placeholder": "快速检索"
+  },
+  "fontList": {
+    "badge": {
+      "old": "old"
+    },
+    "sceneFonts": "当前字体",
+    "availableFonts": "可用字体列表",
+    "empty": "未找到字体"
+  },
+  "commandPalette": {
+    "title": "命令面板",
+    "shortcuts": {
+      "select": "选择",
+      "confirm": "确认",
+      "close": "关闭"
+    },
+    "recents": "最近使用",
+    "search": {
+      "placeholder": "搜索菜单, 命令, 发现隐藏功能",
+      "noMatch": "无匹配的命令..."
+    },
+    "itemNotAvailable": "命令不可用...",
+    "shortcutHint": "使用 {{shortcut}} 打开命令面板"
   }
 }

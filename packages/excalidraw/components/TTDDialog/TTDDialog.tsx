@@ -242,26 +242,28 @@ export const TTDDialogBase = withInternalFallback(
             <p className="dialog-mermaid-title">{t("mermaid.title")}</p>
           ) : (
             <TTDDialogTabTriggers>
-              <TTDDialogTabTrigger tab="text-to-diagram">
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  {t("labels.textToDiagram")}
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      padding: "1px 6px",
-                      marginLeft: "10px",
-                      fontSize: 10,
-                      borderRadius: "12px",
-                      background: "var(--color-promo)",
-                      color: "var(--color-surface-lowest)",
-                    }}
-                  >
-                    AI Beta
+              {app.props.aiEnabled !== false && (
+                <TTDDialogTabTrigger tab="text-to-diagram">
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    {t("labels.textToDiagram")}
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "1px 6px",
+                        marginLeft: "10px",
+                        fontSize: 10,
+                        borderRadius: "12px",
+                        background: "var(--color-promo)",
+                        color: "var(--color-surface-lowest)",
+                      }}
+                    >
+                      AI Beta
+                    </div>
                   </div>
-                </div>
-              </TTDDialogTabTrigger>
+                </TTDDialogTabTrigger>
+              )}
               <TTDDialogTabTrigger tab="mermaid">Mermaid</TTDDialogTabTrigger>
             </TTDDialogTabTriggers>
           )}
