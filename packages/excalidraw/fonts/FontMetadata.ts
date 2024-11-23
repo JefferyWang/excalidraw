@@ -122,6 +122,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY.Yozai]: {
@@ -132,6 +133,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY["LXGW WenKai Lite"]]: {
@@ -142,6 +144,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY.ShouShuti]: {
@@ -152,6 +155,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY.MuyaoPleased]: {
@@ -162,6 +166,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY["Muyao-Softbrush"]]: {
@@ -172,6 +177,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY["新叶念体"]]: {
@@ -182,6 +188,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY.JasonHandwriting1]: {
@@ -192,6 +199,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY.JasonHandwriting2]: {
@@ -202,6 +210,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   [FONT_FAMILY.ChillZhuo]: {
@@ -212,6 +221,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: FreeIcon,
   },
   // 不能商用的字体
@@ -223,6 +233,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTQingSeQingShuTi]: {
@@ -233,6 +244,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTQiMengShouJi]: {
@@ -243,6 +255,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: NoBusinessIcon,
   },
   [FONT_FAMILY.YEFONTZongYiDanMuTi]: {
@@ -253,6 +266,7 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       descender: -400,
       lineHeight: 1.25,
     },
+    local: true,
     icon: NoBusinessIcon,
   },
   [FONT_FAMILY_FALLBACKS.Xiaolai]: {
