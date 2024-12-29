@@ -121,6 +121,7 @@ import DebugCanvas, {
 } from "./components/DebugCanvas";
 import { AIComponents } from "./components/AI";
 import { ExcalidrawPlusIframeExport } from "./ExcalidrawPlusIframeExport";
+import { isElementLink } from "../packages/excalidraw/element/elementLink";
 
 polyfill();
 
@@ -804,6 +805,12 @@ const ExcalidrawWrapper = () => {
               />
             </div>
           );
+        }}
+        onLinkOpen={(element, event) => {
+          if (element.link && isElementLink(element.link)) {
+            event.preventDefault();
+            excalidrawAPI?.scrollToContent(element.link, { animate: true });
+          }
         }}
       >
         <AppMainMenu

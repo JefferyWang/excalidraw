@@ -55,6 +55,10 @@ import { trackEvent } from "../../analytics";
 import { useStable } from "../../hooks/useStable";
 
 import "./CommandPalette.scss";
+import {
+  actionCopyElementLink,
+  actionLinkToElement,
+} from "../../actions/actionElementLink";
 
 const lastUsedPaletteItem = atom<CommandPaletteItem | null>(null);
 
@@ -280,6 +284,8 @@ function CommandPaletteInner({
         actionManager.actions.toggleLinearEditor,
         actionManager.actions.cropEditor,
         actionLink,
+        actionCopyElementLink,
+        actionLinkToElement,
       ].map((action: Action) =>
         actionToCommand(
           action,
