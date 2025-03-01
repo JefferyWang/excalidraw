@@ -1,7 +1,7 @@
 import React from "react";
-import { eyeIcon } from "../../packages/excalidraw/components/icons";
-import type { Theme } from "../../packages/excalidraw/element/types";
-import { MainMenu } from "../../packages/excalidraw/index";
+import { eyeIcon } from "@excalidraw/excalidraw/components/icons";
+import type { Theme } from "@excalidraw/excalidraw/element/types";
+import { MainMenu } from "@excalidraw/excalidraw/index";
 import { LanguageList } from "../app-language/LanguageList";
 import { saveDebugState } from "./DebugCanvas";
 

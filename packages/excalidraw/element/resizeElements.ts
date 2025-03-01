@@ -10,6 +10,7 @@ import type {
   ExcalidrawImageElement,
   ElementsMap,
   SceneElementsMap,
+  ExcalidrawElbowArrowElement,
 } from "./types";
 import type { Mutable } from "../utility-types";
 import {
@@ -40,21 +41,16 @@ import type {
 import type { PointerDownState } from "../types";
 import type Scene from "../scene/Scene";
 import {
-  getApproxMinLineWidth,
   getBoundTextElement,
   getBoundTextElementId,
   getContainerElement,
   handleBindTextResize,
   getBoundTextMaxWidth,
-  getApproxMinLineHeight,
-  measureText,
-  getMinTextElementWidth,
 } from "./textElement";
 import { wrapText } from "./textWrapping";
 import { LinearElementEditor } from "./linearElementEditor";
 import { isInGroup } from "../groups";
-import { mutateElbowArrow } from "./routing";
-import type { GlobalPoint } from "../../math";
+import type { GlobalPoint } from "@excalidraw/math";
 import {
   pointCenter,
   normalizeRadians,
@@ -63,7 +59,13 @@ import {
   pointRotateRads,
   type Radians,
   type LocalPoint,
-} from "../../math";
+} from "@excalidraw/math";
+import {
+  getMinTextElementWidth,
+  measureText,
+  getApproxMinLineWidth,
+  getApproxMinLineHeight,
+} from "./textMeasurements";
 
 // Returns true when transform (resizing/rotation) happened
 export const transformElements = (
@@ -177,10 +179,10 @@ export const transformElements = (
         elementsMap,
         transformHandleType,
         scene,
+        originalElements,
         {
           shouldResizeFromCenter,
           shouldMaintainAspectRatio,
-          originalElementsMap: originalElements,
           flipByX,
           flipByY,
           nextWidth,
@@ -531,8 +533,10 @@ const rotateMultipleElements = (
       );
 
       if (isElbowArrow(element)) {
-        const points = getArrowLocalFixedPoints(element, elementsMap);
-        mutateElbowArrow(element, elementsMap, points);
+        // Needed to re-route the arrow
+        mutateElement(element, {
+          points: getArrowLocalFixedPoints(element, elementsMap),
+        });
       } else {
         mutateElement(
           element,
@@ -765,6 +769,26 @@ const getResizedOrigin = (
         y: y - (newHeight - prevHeight) / 2,
       };
     case "east-side":
+      // NOTE (mtolmacs): Reverting this for a short period to test if it is
+      // the cause of the megasized elbow arrows showing up.
+      if (
+        Math.abs(
+          y +
+            ((prevWidth - newWidth) / 2) * Math.sin(angle) +
+            (prevHeight - newHeight) / 2,
+        ) > 1e6
+      ) {
+        console.error(
+          "getResizedOrigin() new calculation creates extremely large (> 1e6) y value where the old calculation resulted in",
+          {
+            result:
+              y +
+              (newHeight - prevHeight) / 2 +
+              ((prevWidth - newWidth) / 2) * Math.sin(angle),
+          },
+        );
+      }
+
       return {
         x: x + ((prevWidth - newWidth) / 2) * (Math.cos(angle) + 1),
         y:
@@ -1201,6 +1225,7 @@ export const resizeMultipleElements = (
   elementsMap: ElementsMap,
   handleDirection: TransformHandleDirection,
   scene: Scene,
+  originalElementsMap: ElementsMap,
   {
     shouldMaintainAspectRatio = false,
     shouldResizeFromCenter = false,
@@ -1208,7 +1233,6 @@ export const resizeMultipleElements = (
     flipByY = false,
     nextHeight,
     nextWidth,
-    originalElementsMap,
     originalBoundingBox,
   }: {
     nextWidth?: number;
@@ -1217,7 +1241,6 @@ export const resizeMultipleElements = (
     shouldResizeFromCenter?: boolean;
     flipByX?: boolean;
     flipByY?: boolean;
-    originalElementsMap?: ElementsMap;
     // added to improve performance
     originalBoundingBox?: BoundingBox;
   } = {},
@@ -1387,6 +1410,9 @@ export const resizeMultipleElements = (
         fontSize?: ExcalidrawTextElement["fontSize"];
         scale?: ExcalidrawImageElement["scale"];
         boundTextFontSize?: ExcalidrawTextElement["fontSize"];
+        startBinding?: ExcalidrawElbowArrowElement["startBinding"];
+        endBinding?: ExcalidrawElbowArrowElement["endBinding"];
+        fixedSegments?: ExcalidrawElbowArrowElement["fixedSegments"];
       };
     }[] = [];
 
@@ -1426,6 +1452,44 @@ export const resizeMultipleElements = (
         angle,
         ...rescaledPoints,
       };
+
+      if (isElbowArrow(orig)) {
+        // Mirror fixed point binding for elbow arrows
+        // when resize goes into the negative direction
+        if (orig.startBinding) {
+          update.startBinding = {
+            ...orig.startBinding,
+            fixedPoint: [
+              flipByX
+                ? -orig.startBinding.fixedPoint[0] + 1
+                : orig.startBinding.fixedPoint[0],
+              flipByY
+                ? -orig.startBinding.fixedPoint[1] + 1
+                : orig.startBinding.fixedPoint[1],
+            ],
+          };
+        }
+        if (orig.endBinding) {
+          update.endBinding = {
+            ...orig.endBinding,
+            fixedPoint: [
+              flipByX
+                ? -orig.endBinding.fixedPoint[0] + 1
+                : orig.endBinding.fixedPoint[0],
+              flipByY
+                ? -orig.endBinding.fixedPoint[1] + 1
+                : orig.endBinding.fixedPoint[1],
+            ],
+          };
+        }
+        if (orig.fixedSegments && rescaledPoints.points) {
+          update.fixedSegments = orig.fixedSegments.map((segment) => ({
+            ...segment,
+            start: rescaledPoints.points[segment.index - 1],
+            end: rescaledPoints.points[segment.index],
+          }));
+        }
+      }
 
       if (isImageElement(orig)) {
         update.scale = [
@@ -1472,7 +1536,10 @@ export const resizeMultipleElements = (
     } of elementsAndUpdates) {
       const { width, height, angle } = update;
 
-      mutateElement(element, update, false);
+      mutateElement(element, update, false, {
+        // needed for the fixed binding point udpate to take effect
+        isDragging: true,
+      });
 
       updateBoundElements(element, elementsMap as SceneElementsMap, {
         simultaneouslyUpdated: elementsToUpdate,

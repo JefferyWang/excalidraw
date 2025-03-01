@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import React, {
   useMemo,
   useState,
@@ -70,7 +71,8 @@ export const FontPickerList = React.memo(
             const fontDescriptor = {
               value: familyId,
               icon: metadata.icon ?? FontFamilyNormalIcon,
-              text: metadata.name ?? (fontFaces[0]?.fontFace?.family ?? "Unknown"),
+              text:
+                metadata.name ?? fontFaces[0]?.fontFace?.family ?? "Unknown",
             };
 
             if (metadata.deprecated) {
