@@ -13,7 +13,7 @@ import { useMemo } from "react";
 import { getElementsInAtomicUnit, moveElement } from "./utils";
 import type { AtomicUnit } from "./utils";
 import type { AppState } from "../../types";
-import { pointFrom, pointRotateRads } from "../../../math";
+import { pointFrom, pointRotateRads } from "@excalidraw/math";
 
 interface MultiPositionProps {
   property: "x" | "y";
@@ -237,6 +237,7 @@ const MultiPosition = ({
           const [x1, y1] = getCommonBounds(elementsInUnit);
           return Math.round((property === "x" ? x1 : y1) * 100) / 100;
         }
+
         const [el] = elementsInUnit;
         const [cx, cy] = [el.x + el.width / 2, el.y + el.height / 2];
 

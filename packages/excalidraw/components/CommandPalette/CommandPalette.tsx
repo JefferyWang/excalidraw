@@ -35,7 +35,7 @@ import {
   getShortcutKey,
   isWritableElement,
 } from "../../utils";
-import { atom, useAtom } from "jotai";
+import { atom, useAtom, editorJotaiStore } from "../../editor-jotai";
 import { deburr } from "../../deburr";
 import type { MarkRequired } from "../../utility-types";
 import { InlineIcon } from "../InlineIcon";
@@ -47,7 +47,6 @@ import {
   actionLink,
   actionToggleSearchMenu,
 } from "../../actions";
-import { jotaiStore } from "../../jotai";
 import { activeConfirmDialogAtom } from "../ActiveConfirmDialog";
 import type { CommandPaletteItem } from "./types";
 import * as defaultItems from "./defaultCommandPaletteItems";
@@ -262,6 +261,7 @@ function CommandPaletteInner({
         actionManager.actions.cut,
         actionManager.actions.copy,
         actionManager.actions.deleteSelectedElements,
+        actionManager.actions.wrapSelectionInFrame,
         actionManager.actions.copyStyles,
         actionManager.actions.pasteStyles,
         actionManager.actions.bringToFront,
@@ -347,7 +347,7 @@ function CommandPaletteInner({
           keywords: ["delete", "destroy"],
           viewMode: false,
           perform: () => {
-            jotaiStore.set(activeConfirmDialogAtom, "clearCanvas");
+            editorJotaiStore.set(activeConfirmDialogAtom, "clearCanvas");
           },
         },
         {
