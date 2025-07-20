@@ -41,9 +41,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: "excalidraw-app/build/"
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
       - name: Deploy to VPS
         uses: easingthemes/ssh-deploy@main
         env:
